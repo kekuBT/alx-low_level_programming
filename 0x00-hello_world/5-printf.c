@@ -1,7 +1,10 @@
 #include <stdio.h>
 /**
-*main -entry point
-*My hello, printf task
-*Return: return 1 after program execution
+*main - main block
+*Return: 0
 */
-inr main
+int main(void)
+{
+printf("with proper grammar, but the outcome is a piece of art,");
+return (0);
+}
