@@ -8,21 +8,23 @@
 */
 int main(void)
 {
-int n;
-strand(time(0));
-n = rand() - Rand_max / 2
-if (n==0)
-{
-	printf("%d is zero\n", n);
-}
-else if (n<0)
-{
-	printf("%d is negative\n", n);
-}
-else
-{
-	printf("%d is positive\n", n);
-}
+	int n;
+
+
+	strand(time(0));
+	n = rand() - Rand_max / 2
+	if (n==0)
+	{
+		printf("%d is zero\n", n);
+	}
+	else if (n<0)
+	{
+		printf("%d is negative\n", n);
+	}
+	else
+	{
+		printf("%d is positive\n", n);
+	}
 	return(0);
 
 }
