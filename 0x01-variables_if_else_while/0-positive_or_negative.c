@@ -11,8 +11,10 @@ int main(void)
 	int n;
 
 
-	strand(time(0));
-	n = rand() - Rand_max / 2
+	srand(time(0));
+	n = rand() - RAND_MAX / 2
+
+
 	if (n==0)
 	{
 		printf("%d is zero\n", n);
