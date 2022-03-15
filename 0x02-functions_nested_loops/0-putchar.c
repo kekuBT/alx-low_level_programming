@@ -12,7 +12,7 @@ int main(void)
 
 	for (c = 0; c < 8; c++)
 	{
-	 	_putchar(hello[c]);
+		_putchar(hello[c]);
 	}
 	_putchar('\n');
 
