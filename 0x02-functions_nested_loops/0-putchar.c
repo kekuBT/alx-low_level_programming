@@ -9,10 +9,11 @@ int main(void)
 	char hello[] = "_putchar";
 
 	int c;
+
 	for (c = 0; c < 8; c++)
 
 	{
-		 _putchar(hello[c]);
+	 _putchar(hello[c]);
 	}
 	_putchar('\n');
 
