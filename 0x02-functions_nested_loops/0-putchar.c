@@ -10,10 +10,10 @@ int main(void)
 
 	int c;
 
-		for (c = 0; c < 8; c++)
-		{
-		 _putchar(hello[c]);
-		}
+	for (c = 0; c < 8; c++)
+	{
+	 	_putchar(hello[c]);
+	}
 	_putchar('\n');
 
 	return (0);
