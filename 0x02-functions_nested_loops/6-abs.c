@@ -1,7 +1,7 @@
 #include "main.h"
 /**
-* main - entry block
-* @void: no argument
+* _abs - entry block
+* @n: no argument
 * Return: 0
 **/
 int _abs(int n)
