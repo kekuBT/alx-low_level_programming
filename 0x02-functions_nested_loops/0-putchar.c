@@ -14,7 +14,7 @@ int main(void)
 	for (c = 0; c < 8; c++)
 
 	{
-	_putchar(ermias[c]);
+	_putchar(adamsx[c]);
 	}
 
 	_putchar('\n')
