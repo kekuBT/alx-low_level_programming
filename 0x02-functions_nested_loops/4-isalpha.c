@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * _isalpha - program that prints the alphabet in lowercase, followed by a new line
- * @c - You can only use the putchar
+ * _isalpha - program that prints the alphabet in lowercase, followed 
+ * @c: You can only use the putchar
  * Return: 0
  */
 
