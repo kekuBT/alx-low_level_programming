@@ -7,14 +7,14 @@
 
 int main(void)
 
-	char adams[] = "_putchar";
+	char ermias[] = "_putchar";
 
 	int c;
 
 	for (c = 0; c < 8; c++)
 
 	{
-	_putchar(adams[c]);
+	_putchar(ermias[c]);
 	}
 
 	_putchar('\n')
