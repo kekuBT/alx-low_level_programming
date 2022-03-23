@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
+ * puts2 - Prints one char out of two of a string.
  * _puts - function that prints a string
- * puts2 - function that prints every other character in the whole codevand
  *
  * @str: pointer to char
  * Return: nothing
