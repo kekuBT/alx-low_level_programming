@@ -2,7 +2,7 @@
 
 /**
  * _puts - function that prints a string
- * puts2 - function that prints every other character in the whole code
+ * puts2 - function that prints every other character in the whole codevand *str
  *
  * @str: pointer to char
  * Return: nothing
