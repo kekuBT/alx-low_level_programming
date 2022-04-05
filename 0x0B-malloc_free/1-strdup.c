@@ -10,21 +10,26 @@
  * Return: If size == 0 or the function fails - NULL.
  *         Otherwise - a pointer to the array.
  */
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 {
-	char *array;
-	unsigned int index;
+	char *duplicate;
+	int index, len = 0;
 
-	if (size == 0)
+	if (str == NULL)
 		return (NULL);
 
-	array = malloc(sizeof(char) * size);
+	for (index = 0; str[index]; index++)
+		len++;
 
-	if (array == NULL)
+	duplicate = malloc(sizeof(char) * (len + 1));
+
+	if (duplicate == NULL)
 		return (NULL);
 
-	for (index = 0; index < size; index++)
-		array[index] = c;
+	for (index = 0; str[index]; index++)
+		duplicate[index] = str[index];
 
-	return (array);
+	duplicate[len] = '\0';
+
+	return (duplicate);
 }
