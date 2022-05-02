@@ -1,51 +1,48 @@
+#include <unistd.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 #include "main.h"
-#include <stddef.h>
 
 /**
- * _strlen - counts string length
- * @str: string to be used
+ * _strlen - function that returns the length of a string.
  *
- * Return: length of the string
+ * @s: pointer to an string
+ * Return: int
  */
-int _strlen(char *str)
-{
-    int len = 0;
 
-    while (str[len] != '\0')
-        len++;
-    return (len);
+int _strlen(char *s)
+{
+    int i = 0;
+
+    while (s[i] != '\0')
+    {
+        i += 1;
+    }
+    return (i);
 }
 
 /**
- * create_file - creates a file
+ * append_text_to_file - function that appends text ot a file.
  * @filename: name of the file
- * @text_content: content of the file to be created
- *
- * Return: 1 on success, -1 otherwise
+ * @text_content: NULL terminated string to add at the end of the file
+ * Return: 1 on success and -1 on failure
  */
-int create_file(const char *filename, char *text_content)
+
+int append_text_to_file(const char *filename, char *text_content)
 {
-    int file, wrote;
+    int fd, fd_write;
 
     if (filename == NULL)
         return (-1);
-    file = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
-    if (file == -1)
+    if (text_content == NULL)
+        return (1);
+    fd = open(filename, O_RDWR | O_APPEND);
+    if (fd == -1)
         return (-1);
-    if (text_content != NULL)
-    {
-        wrote = write(file, text_content, _strlen(text_content));
-        if (wrote == -1)
-        {
-            close(file);
-            return (-1);
-        }
-        close(file);
-        return (1);
-    }
-    else
-    {
-        close(file);
-        return (1);
-    }
+    fd_write = write(fd, text_content, _strlen(text_content));
+    close(fd);
+    if (fd_write == -1)
+        return (-1);
+    return (1);
 }
